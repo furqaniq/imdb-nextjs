@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ThemeCom } from "./ThemeCom";
 
 export default function Header() {
   return (
@@ -15,15 +16,18 @@ export default function Header() {
           <Link href={"/about"}>About</Link>
         </li>
       </ul>
-      <Link
-        href={"/"}
-        className="flex gap-1 items-center"
-      >
-        <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
-          IMDb
-        </span>
-        <span className="text-xl hidden sm:inline">Clone</span>
-      </Link>
+      <div className="flex items-center gap-4">
+        <ThemeCom />
+        <Link
+          href={"/"}
+          className="flex gap-1 items-center"
+        >
+          <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
+            IMDb
+          </span>
+          <span className="text-xl hidden sm:inline">Clone</span>
+        </Link>
+      </div>
     </div>
   );
 }
